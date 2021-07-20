@@ -180,7 +180,7 @@ elseif(@$_REQUEST['type']=='applyNow'){
     $body .="<i>loanamount:</i>$loanamount<br/>";
     $body .="<i>previousloan:</i>$previousloan<br/>";
 
-
+    $mail->Body =$body;
     $mail->AltBody = "This is the plain text version of the email content";
     
     try {
@@ -250,7 +250,7 @@ elseif(@$_REQUEST['type']=='creditCard'){
     $body .="<i>creditScore:</i>$creditScore<br/>";
     $body .="<i>loanamount:</i>$loanamount<br/>";
 
-
+    $mail->Body =$body;
     $mail->AltBody = "This is the plain text version of the email content";
     
     try {
