@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-.fusion-main-menu > ul > li > a { text-transform:uppercase}
+.fusion-main-menu > ul > li > a { text-transform:uppercase; text-decoration: none;}
 
 .fusion-main-menu > ul > li:last-child > a { background:#f16212; color:#FFF; height:50px; line-height:50px; padding:0 10px; margin-top:27px; border-radius:3px}
 .fusion-main-menu > ul > li:last-child.current-menu-item > a { color:#FFF}
