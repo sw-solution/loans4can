@@ -1,15 +1,35 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+
+
 
 require_once "vendor/autoload.php";
 
 //PHPMailer Object
 $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
 
+//Enable SMTP debugging.
+$mail->SMTPDebug = 3;                               
+//Set PHPMailer to use SMTP.
+$mail->isSMTP();            
+//Set SMTP host name                          
+$mail->Host = "smtp.gmail.com";
+//Set this to true if SMTP host requires authentication to send email
+$mail->SMTPAuth = true;                          
+//Provide username and password     
+$mail->Username = "name@gmail.com";                 
+$mail->Password = "super_secret_password";                           
+//If SMTP requires TLS encryption then set it
+$mail->SMTPSecure = "tls";                           
+//Set TCP port to connect to
+$mail->Port = 587;  
+
+
 //From email address and name
 $mail->From = "from@webfreelancedesign.com";
-$mail->FromName = "loans4can";
+$mail->FromName = "PrimeCapital";
 
 
 $mail->addReplyTo("reply@webfreelancedesign.com", "Reply");
